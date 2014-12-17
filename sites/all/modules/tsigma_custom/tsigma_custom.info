@@ -1,0 +1,4 @@
+name = Tsigma custom module 
+description = Provides custom functions of Tsigma.
+core = 7.x
+

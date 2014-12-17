@@ -1,0 +1,13 @@
+<?php
+
+
+function tsigma_custom_block_view_alter(&$data, $block){
+//echo '<pre>';print_r($data); 
+	if($block->bid == 43 && $block->module == 'user' && $block->delta == 'login'){
+		
+		 $data['content']['links']['#markup'] = '<ul><li>'.l('Request new password','user/password').'</li><li>'.l('Register as student','student/register').'</li><li>'.l('Register as professor','professor/register').'</li></ul>';
+	}
+	if($block->bid == 41 && $block->module == 'system' && $block->delta == 'powered-by'){
+		$data['content'] = 'Powered by TSIGMA'; 
+	}
+}
